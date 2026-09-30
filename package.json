@@ -1,0 +1,38 @@
+{
+  "name": "scoter",
+  "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:push": "drizzle-kit push",
+    "import:catalog": "tsx src/server/catalog/import-cli.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^1.10.0",
+    "drizzle-orm": "^0.44.5",
+    "next": "^15.5.4",
+    "next-auth": "5.0.0-beta.29",
+    "nodemailer": "^7.0.13",
+    "postgres": "^3.4.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "@types/nodemailer": "^6.4.24",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "drizzle-kit": "^0.31.5",
+    "playwright": "^1.63.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

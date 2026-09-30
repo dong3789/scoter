@@ -1,0 +1,7 @@
+node_modules
+.next
+.env
+data/dev-magic-link.txt
+*.log
+.DS_Store
+tsconfig.tsbuildinfo

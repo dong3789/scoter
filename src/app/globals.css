@@ -1,0 +1,287 @@
+:root {
+  --paper: #e4eee8;
+  --ink: #1b2820;
+  --muted: #5c6f64;
+  --line: #c3d2c9;
+  --capsule: #e36a2c;
+  --danger: #8d2f2f;
+  --font-ui: "Gowun Dodum", "Apple SD Gothic Neo", sans-serif;
+  --font-name: "Gowun Batang", "Apple SD Gothic Neo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--capsule);
+  outline-offset: 2px;
+}
+
+.site-header {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.wordmark {
+  font-family: var(--font-name);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header form {
+  margin: 0;
+}
+
+h1,
+.person {
+  font-family: var(--font-name);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.4rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin: 1.6rem 0 0.6rem;
+}
+
+.lede,
+.meta,
+.when,
+.site-header button,
+.notice {
+  color: var(--muted);
+}
+
+.when {
+  color: var(--capsule);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button,
+.button {
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.site-header button,
+.quiet {
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+}
+
+button.danger,
+.danger {
+  background: transparent;
+  color: var(--danger);
+  padding: 0;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.7rem 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 0.4rem 0;
+  border-radius: 0;
+}
+
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid var(--ink);
+  accent-color: var(--capsule);
+}
+
+label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inline input {
+  width: 6rem;
+}
+
+textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stacks,
+.products,
+.plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stacks > li {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.person {
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.products li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  margin-top: 0.35rem;
+}
+
+.products a {
+  font-family: var(--font-name);
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.mine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.mine a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--capsule);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.row form,
+.inline {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-end;
+}
+
+.nutrient-line {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 0.6fr;
+  gap: 0.6rem;
+}
+
+.notice {
+  margin: 0 0 1rem;
+}
+
+.check-card {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.totals li,
+.sentences li {
+  padding: 0.2rem 0;
+}
+
+@media (max-width: 640px) {
+  .pair,
+  .nutrient-line,
+  .row,
+  .inline {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .products li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}
